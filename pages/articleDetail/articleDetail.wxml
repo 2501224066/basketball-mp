@@ -1,0 +1,14 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="活动介绍" bg="#EDEDED"></navbar>
+
+<image src="{{imgPre}}/{{detail.cov_pic}}" mode="widthFix"></image>
+
+<view class="title">{{detail.post_title}}</view>
+<view class="memo">
+  <view>作者：{{detail.post_author}}</view>
+  <view>{{detail.created_at}}</view>
+</view>
+
+<view class="content">
+  <rich-text nodes="{{content}}"></rich-text>
+</view>

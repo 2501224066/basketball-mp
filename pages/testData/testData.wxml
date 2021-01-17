@@ -1,0 +1,85 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="体测数据"></navbar>
+
+<view class="label">
+  <view class="label-line"></view>
+  <view>维度数据</view>
+</view>
+<!-- 雷达图 -->
+<view class="box">
+  <ec-canvas id="mychart-dom-graph" canvas-id="graph" ec="{{ leida }}"></ec-canvas>
+</view>
+
+<view class="ma">
+  <text class="cuIcon-cardboardfill text-yellow"></text>
+</view>
+
+<!-- 评级概括 -->
+<view class="label">
+  <view class="label-line"></view>
+  <view>评级概括</view>
+</view>
+<view class="label-content">反映了孩子参与体质测试项目评级（优秀、良好、合格与需努力）的比例，并从最近两次体测对比中可以观察到测试评级比例的变化情况。</view>
+<!-- 饼图 -->
+<view class="box">
+  <view class="box-item">
+    <ec-canvas id="mychart-dom-pie0" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
+  </view>
+  <view class="box-item">
+    <ec-canvas id="mychart-dom-pie1" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
+  </view>
+  <view class="box-content">
+    <view>
+      <view class="dian" style="background:#5AD7A6"></view>
+      <view>优秀</view>
+    </view>
+    <view>
+      <view class="dian" style="background:#5A8EF9"></view>
+      <view>良好</view>
+    </view>
+    <view>
+      <view class="dian" style="background:#F6BD16"></view>
+      <view>合格</view>
+    </view>
+    <view>
+      <view class="dian" style="background:#FF5783"></view>
+      <view>需努力</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="ma">
+  <text class="cuIcon-cardboardfill text-yellow"></text>
+</view>
+
+
+<!-- 体测参数 -->
+<view class="label">
+  <view class="label-line"></view>
+  <view>体测记录</view>
+</view>
+<view class="tab" wx:for="{{list}}" wx:key="index">
+  <view class="tab-top">
+    <view>{{item.first}}</view>
+    <view>{{item.title}}</view>
+    <view>{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1]}}{{item.specs}}</view>
+    <view>
+      <text wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}" class="cuIcon-top text-green"></text>
+      <text wx:else class="cuIcon-down text-red"></text>
+      <view wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}" class="text-green">{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] - ZHEXIAN_DATA.data[index][0]}}{{item.specs}}</view>
+      <view wx:else class="text-red">{{ZHEXIAN_DATA.data[index][0] - ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1]}}{{item.specs}}</view>
+    </view>
+  </view>
+  <!-- 折线图 -->
+  <view class="box">
+    <ec-canvas id="mychart-dom-line{{index}}" canvas-id="mychart-line" ec="{{ zhexian }}"></ec-canvas>
+  </view>
+  <view class="tab-down">
+    <view>超出全国同龄儿童：</view>
+    <view>{{item.then}}</view>
+  </view>
+</view>
+
+<!-- 底部标示 -->
+<footerTips></footerTips>

@@ -1,0 +1,100 @@
+<!-- 工具 -->
+<wxs src="../../utils/index.wxs" module="util"></wxs>
+
+<!-- 顶部导航 -->
+<navbar it="2" title="首页" back="hidden" open="false" bg="#C6D2FF"></navbar>
+
+<view class="top">
+  <!-- 背景圆 -->
+  <view class="bgo"></view>
+
+  <!-- 轮播 -->
+  <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
+    duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#f3f3f3">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{imgPre}}/{{item}}" mode="aspectFill"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- Icon -->
+<view class="icon-list">
+  <view bindtap="toCompanyDetail">
+    <image src="/image/index-1.png"></image>
+    <view>机构介绍</view>
+  </view>
+  <view bindtap="toTeam">
+    <image src="/image/index-2.png"></image>
+    <view>球队</view>
+  </view>
+  <view bindtap="toStudent">
+    <image src="/image/index-3.png"></image>
+    <view>球员风采</view>
+  </view>
+  <view bindtap="toTeacher">
+    <image src="/image/index-4.png"></image>
+    <view>教练风采</view>
+  </view>
+</view>
+
+<!-- 精彩视频 -->
+<view class="box">
+  <view class="box-top">
+    <view class="label">精彩视频<image src="/image/i-1.png"></image>
+    </view>
+    <view class="more" bindtap="toVideoList">查看更多</view>
+  </view>
+  <view class="box-content">
+    <view class="vi">
+      <video src="{{imgPre}}/{{home.video.video_url}}" object-fit="fill"></video>
+    </view>
+    <view class="box-title">{{util.strHid(home.video.video_name, 20)}}</view>
+  </view>
+</view>
+
+<!-- 活动中心 -->
+<view class="box">
+  <view class="box-top">
+    <view class="label">活动中心<image src="/image/i-2.png"></image>
+    </view>
+    <view class="more" bindtap="toArticleList">查看更多</view>
+  </view>
+  <view class="box-content" bindtap="toArticle" data-id="{{home.article.id}}">
+    <view class="vi">
+      <image src="{{imgPre}}/{{home.article.cov_pic}}" mode="aspectFill"></image>
+    </view>
+    <view class="box-title">{{util.strHid(home.article.post_title, 20)}}</view>
+  </view>
+</view>
+
+<!-- 球员展示 -->
+<view class="box" wx:if="{{home.list.length}}">
+  <view class="box-top" bindtap="toStudent">
+    <view class="label">优秀学员<image src="/image/i-3.png"></image>
+    </view>
+    <view class="more">查看更多</view>
+  </view>
+  <view class="box-man" wx:for="{{home.list}}" wx:key="index" bindtap="toStudentDetail" data-id="{{item.user_id}}">
+    <view class="header">
+      <image src="{{imgPre}}/{{item.play_img}}" mode="aspectFill"></image>
+    </view>
+    <view class="man">
+      <view class="man-1">
+        <view>{{item.user_name}}</view>
+        <view>{{item.age ? item.age : ' - '}}岁</view>
+        <view class="man-where">{{item.position}}</view>
+      </view>
+      <view class="man-2">
+        <view>跳远:{{item.long_jump ? item.long_jump : ' - '}}m</view>
+        <view>摸高:{{item.sargent_jump ? item.sargent_jump : ' - '}}m</view>
+      </view>
+      <view class="man-2">
+        <view>臂展:{{item.arm_spread ? item.arm_spread : ' - '}}m</view>
+          <view>手指跨度:{{item.finger_span ? item.finger_span : ' - '}}m</view>
+      </view>
+      <view class="man-3">综合评分:<span>{{item.point ? item.point : ' - '}}分</span></view>
+    </view>
+  </view>
+</view>

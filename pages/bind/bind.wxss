@@ -1,0 +1,52 @@
+page {
+  background: #fff !important;
+}
+
+.box {
+  padding: 20rpx 30rpx;
+}
+
+.phone {
+  height: 80rpx;
+  border: 1rpx solid #ebebeb;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+}
+
+
+.code {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.code>input {
+  height: 80rpx;
+  width: 60%;
+  border: 1rpx solid #ebebeb;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+}
+
+.code>view {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #f2f2f2;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  color: #999;
+}
+
+.sub {
+  font-weight: 500;
+  background: #FAD55B;
+  color: #333;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}

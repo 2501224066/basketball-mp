@@ -1,0 +1,31 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="个人休课" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <view class="title">
+    <span>*</span>休课原因
+  </view>
+
+  <textarea placeholder="请输入休课原因…" bindblur="text"></textarea>
+
+  <view class="title">
+    <span>*</span>上传证明
+  </view>
+</view>
+
+<view class="img-box">
+  <view class="img">
+    <view wx:for="{{imgList}}" wx:key="index">
+      <image src="{{imgPre}}/{{item}}" mode="aspectFill"></image>
+    </view>
+
+    <view class="img-add" bindtap="uploadImg">
+      <view>+</view>
+      <view>上传照片</view>
+    </view>
+  </view>
+</view>
+
+<view class="box">
+  <view class="sub" wx:if="{{text && imgList.length}}" bindtap="submit">提交</view>
+</view>

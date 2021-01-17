@@ -1,0 +1,25 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="教员风采" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <!-- 列表 -->
+  <view class="list" wx:for="{{list}}" wx:key="index">
+    <image src="{{imgPre}}/{{item.header_img}}" mode="aspectFill"></image>
+    <view class="list-body">
+      <view class="list-detail">
+        <view class="title">{{item.user_name}}</view>
+        <view class="height">{{item.height}}m/{{item.weight}}kg</view>
+      </view>
+      <view class="list-detail-1">
+        <view>毕业院校:</view>
+        <view class="list-label">{{item.school}}</view>
+      </view>
+      <view class="list-detail-1" wx:if="{{item.honnor}}">
+        <view>获得荣誉:</view>
+        <view class="list-label">
+          {{item.honnor}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

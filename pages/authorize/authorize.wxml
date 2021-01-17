@@ -1,0 +1,14 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="授权" opacity="true"></navbar>
+
+<view class="logo">
+  <view>
+    <image src="/image/logo.jpg"></image>
+  </view>
+  <view class="title">GCF</view>
+  <view class="title2">篮球俱乐部</view>
+</view>
+
+<view class="login">
+  <button class="sub" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权信息</button>
+</view>

@@ -1,0 +1,16 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="球队列表" bg="#EDEDED"></navbar>
+
+<!-- 球队 -->
+<view class="box">
+  <view class="list" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" bindtap="toTeamDetail">
+    <image src="{{imgPre}}/{{item.tea_log}}"></image>
+    <view>
+      <view class="team-title">{{item.team_name}}</view>
+      <view class="team-memo"><text class="cuIcon-magic lg text-gray"></text>{{item.motto}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部标示 -->
+<footerTips></footerTips>

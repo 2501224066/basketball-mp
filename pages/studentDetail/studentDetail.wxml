@@ -1,0 +1,66 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="学员详情" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <view class="box-man">
+    <view class="header">
+      <image src="{{imgPre}}/{{detail.play_img}}" mode="aspectFill"></image>
+    </view>
+    <view class="man">
+      <view>
+        <view class="man-1">
+          <view class="text-yellow">{{detail.user_name}}</view>
+        </view>
+        <view class="man-2">
+          <view>{{detail.age ? detail.age : ' - '}}岁</view>
+          <view class="man-where">{{detail.position ? detail.position : ' - '}}</view>
+        </view>
+      </view>
+      <view>
+        <view class="man-2">
+          <view>跳远:{{detail.long_jump ? detail.long_jump : ' - '}}m</view>
+          <view>摸高:{{detail.sargent_jump ? detail.sargent_jump : ' - '}}m</view>
+        </view>
+        <view class="man-2">
+          <view>臂展:{{detail.arm_spread ? detail.arm_spread : ' - '}}m</view>
+          <view>手指跨度:{{detail.finger_span ? detail.finger_span : ' - '}}m</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="label" bindtap="toTestData" wx:if="{{detail.sport_status}}">
+  <view class="label-line"></view>
+  <view>体测报告</view>
+  <text class="cuIcon-right text-yellow"></text>
+</view>
+
+<view class="label"  wx:if="{{video.length}}">
+  <view class="label-line"></view>
+  <view>训练视频</view>
+</view>
+
+<!-- 视频 -->
+<view class="box">
+  <view class="box-content" wx:for="{{video}}" wx:key="index">
+    <view class="vi">
+      <video src="{{imgPre}}/{{item}}" object-fit="fill"></video>
+    </view>
+  </view>
+</view>
+
+<!-- 照片 -->
+<view class="label" wx:if="{{swiperList.length}}">
+  <view class="label-line"></view>
+  <view>练习瞬间</view>
+  <text class="cuIcon-right text-yellow"></text>
+</view>
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
+  duration="500" bindchange="cardSwiper" indicator-color="#fcf0d0" indicator-active-color="#eeb73f">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{imgPre}}/{{item}}" mode="aspectFill"></image>
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,31 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="课程卡介绍" bg="#EDEDED"></navbar>
+
+<!-- 图片 -->
+<swiper class="screen-swiper" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{imgPre}}/{{detail.card_in_img}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<view class="top">
+  <view>
+    <view class="title">{{detail.card_name}}</view>
+    <view class="price">{{detail.card_price}}元</view>
+  </view>
+  <view class="day">有效时长：{{detail.time}}天</view>
+</view>
+
+
+<view class="memo">
+  <view class="memo-title">
+    课程介绍
+  </view>
+  <image src="{{imgPre}}/{{detail.card_img}}" mode="aspectFill"></image>
+  <view class="memo-body">{{detail.class_intro}}</view>
+</view>
+
+<!-- 购买 -->
+<view class="buy {{iphoneFooter ? 'buy-1' : ''}}" wx:if="{{detail.class_status}}" bindtap="buy">立即购买</view>
+<view class="buy-j {{iphoneFooter ? 'buy-j' : ''}}"></view>
+

@@ -1,0 +1,46 @@
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+.nv {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+.navbar .icon{
+  width: 46rpx;
+  text-align: center;
+}
+
+.navbar text {
+  font-size: 46rpx;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 34rpx;
+  box-sizing: border-box;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.opacity {
+  background: rgba(0, 0, 0, 0) !important;
+}

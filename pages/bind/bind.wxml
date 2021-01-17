@@ -1,0 +1,11 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="个人请假" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <input class="phone" type="number" placeholder="请输入学员注册手机号" maxlength="11" bindblur="phone" />
+  <view class="code">
+    <input type="text" placeholder="请输入验证码" bindblur="code" maxlength="6" />
+    <view bindtap="smsCode">发送验证码<span wx:if="{{time > 0}}">({{time}})</span></view>
+  </view>
+  <view class="sub" wx:if="{{phone && code}}" bindtap="bind">绑定</view>
+</view>

@@ -1,0 +1,70 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="球队详情" bg="#EDEDED"></navbar>
+
+<!-- 球队 -->
+<view class="team">
+  <view class="team-box">
+    <image src="{{imgPre}}/{{detail.tea_log}}"></image>
+    <view class="team-body">
+      <view>{{detail.team_name}}</view>
+      <view class="xie"><text class="cuIcon-magic lg text-gray"></text>{{detail.motto}}</view>
+      <view>主教练：{{detail.coach}}</view>
+      <view>成立时间：{{detail.establish}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 球队介绍 -->
+<view class="label" wx:if="{{courseList.length}}">
+  <view class="label-line"></view>
+  <view>课时安排</view>
+  <view class="label-line"></view>
+</view>
+<view class="course">
+  <view wx:for="{{courseList}}" wx:key="index" wx:if="{{index < 3 || courseMore}}">
+    <view class="course-title">{{item.class_name}}</view>
+    <view class="course-time">
+      <view>{{item.class_start_time}}</view>
+      <view>{{item.class_end_time}}</view>
+    </view>
+  </view>
+</view>
+<view class="course-more" bindtap="courseMore" wx:if="{{!courseMore && courseList.length > 3}}">SEE MORE...</view>
+
+<!-- 球队介绍 -->
+<view class="label">
+  <view class="label-line"></view>
+  <view>球队介绍</view>
+  <view class="label-line"></view>
+</view>
+<view class="memo">　　{{detail.introduce}}</view>
+
+<!-- 照片 -->
+<view class="label swiper-label">
+  <view class="label-line"></view>
+  <view>球队照片</view>
+  <view class="label-line"></view>
+</view>
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
+  duration="500" bindchange="cardSwiper" indicator-color="#fcf0d0" indicator-active-color="#eeb73f">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{imgPre}}/{{item}}" mode="aspectFill"></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<!-- 球队成员 -->
+<view class="label">
+  <view class="label-line"></view>
+  <view>球队成员</view>
+  <view class="label-line"></view>
+</view>
+<view class="people">
+  <view wx:for="{{manList}}" wx:key="index">
+    <image src="{{item.user_headimgurl}}"></image>
+  </view>
+</view>
+
+<!-- 底部标示 -->
+<footerTips></footerTips>

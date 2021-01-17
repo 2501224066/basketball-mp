@@ -1,0 +1,71 @@
+page {
+  background: #fff !important;
+}
+
+map {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.where {
+  padding: 20rpx 30rpx;
+  border-bottom: 10rpx solid #F5F7FA;
+}
+
+.where-label{
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+}
+
+.where-address{
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+
+.where text {
+  font-size: 44rpx !important;
+  margin-right: 10rpx;
+}
+
+.label {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.label-a {
+  position: absolute;
+  left: 175rpx;
+  top: 0;
+  width: 400rpx;
+  height: 50rpx;
+  border-bottom: 1rpx solid #FECD35;
+  z-index: -1;
+}
+
+.label-b {
+  position: absolute;
+  left: 338rpx;
+  top: 0;
+  width: 85rpx;
+  height: 100rpx;
+  border: 1rpx solid #FECD35;
+  z-index: -1;
+}
+
+.label span {
+  background: #fff;
+  padding: 4rpx 30rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+
+.content {
+  padding: 0 30rpx 10vh 30rpx;
+}

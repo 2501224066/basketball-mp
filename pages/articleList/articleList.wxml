@@ -1,0 +1,11 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="活动列表" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <view class="box-content" wx:for="{{list}}" wx:key="index" bindtap="toArticleDetail" data-id="{{item.id}}">
+    <view class="vi">
+      <image src="{{imgPre}}/{{item.cov_pic}}" mode="aspectFill"></image>
+    </view>
+    <view class="box-title">{{item.post_title}}</view>
+  </view>
+</view>

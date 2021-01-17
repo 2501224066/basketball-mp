@@ -1,0 +1,201 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.4",
+  "appid": "wx17124ddc97d87567",
+  "projectname": "basketball-mp",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "课时卡",
+          "pathName": "pages/card/card",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "球队",
+          "pathName": "pages/teamList/teamList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "教员风采",
+          "pathName": "pages/teacherList/teacherList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "球队详情",
+          "pathName": "pages/teamDetail/teamDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "课时卡详情",
+          "pathName": "pages/cardDetail/cardDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登陆",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "授权",
+          "pathName": "pages/authorize/authorize",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "体测数据",
+          "pathName": "pages/testData/testData",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 9,
+          "name": "请假",
+          "pathName": "pages/leave/leave",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "休课",
+          "pathName": "pages/recess/recess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "学员风采",
+          "pathName": "pages/studentList/studentList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "学员详情",
+          "pathName": "pages/studentDetail/studentDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 13,
+          "name": "机构介绍",
+          "pathName": "pages/companyDetail/companyDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "文章",
+          "pathName": "pages/articleDetail/articleDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "文章列表",
+          "pathName": "pages/articleList/articleList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 16,
+          "name": "视频列表",
+          "pathName": "pages/videoList/videoList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 17,
+          "name": "绑定学员",
+          "pathName": "pages/bind/bind",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

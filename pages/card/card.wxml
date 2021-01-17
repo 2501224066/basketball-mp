@@ -1,0 +1,20 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="课时卡" back="hidden" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <!-- 课时卡 -->
+  <view class="card" wx:for="{{list}}" wx:key="index">
+    <view>
+      <view class="card-img" bindtap="toCardDetail" data-id="{{item.id}}">
+        <image src="{{imgPre}}/{{item.card_img}}" mode="aspectFill"></image>
+      </view>
+      <view class="card-body" bindtap="toCardDetail" data-id="{{item.id}}">
+        <view class="card-title">{{item.card_name}}</view>
+        <view><text class="cuIcon-ticket text-gray"></text>课程价值：<span class="card-price">{{item.card_price}}元</span>
+        </view>
+        <view><text class="cuIcon-time text-gray"></text>有效时长：{{item.time}}天</view>
+      </view>
+      <view class="card-footer" wx:if="{{item.class_status}}" bindtap="buy" data-id="{{item.id}}">立即购买</view>
+    </view>
+  </view>
+</view>

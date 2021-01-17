@@ -1,0 +1,147 @@
+page {
+  background: #f2f2f2 !important;
+}
+
+.label {
+  padding: 20rpx 30rpx;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.ma {
+  padding: 5vh 0;
+  text-align: center;
+  font-size: 40rpx !important;
+  background: #fff;
+}
+
+.label-line {
+  width: 8rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  border-radius: 4rpx;
+  background: #FDD430;
+}
+
+.box {
+  padding: 10rpx 0;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  background: #fff;
+}
+
+.box-item{
+  width: 50%;
+  height: 100%;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.tab {
+  position: relative;
+  border-bottom: 20rpx solid #f2f2f2;
+}
+
+.tab-top {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.tab-top>view:nth-child(1) {
+  font-weight: 500;
+  font-size: 40rpx;
+  color: #FDD430;
+  margin-right: 10rpx;
+}
+
+.tab-top>view:nth-child(2) {
+  padding: 0 30rpx;
+  background: #FDD430;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1rpx solid #FDD430;
+}
+
+.tab-top>view:nth-child(3) {
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #FDD430;
+  font-size: 40rpx;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+.tab-top>view:nth-child(4) {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tab-down {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #999;
+}
+
+.tab-down>view:nth-child(2) {
+  color: #666;
+  font-size: 40rpx;
+  font-weight: 500;
+  font-style: oblique;
+  margin-left: 20rpx;
+}
+
+.label-content {
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 30rpx;
+  font-weight: lighter;
+  background: #fff;
+}
+
+.box-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+}
+
+.box-content>view{
+  display: flex;
+  align-items: center;
+}
+
+.dian{
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 8rpx;
+  margin-right: 14rpx;
+}
+
+.box-item{
+  width: 50%;
+}

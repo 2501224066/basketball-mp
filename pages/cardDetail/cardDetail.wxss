@@ -1,0 +1,84 @@
+page {
+  background: #fff !important;
+}
+
+.top {
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #F5F7FA;
+}
+
+.top>view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #000;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 34rpx;
+  color: #E02020;
+}
+
+.day {
+  margin-top: 10rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+
+.memo {
+  padding: 20rpx 30rpx;
+}
+
+.memo-title {
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  color: #232326;
+  font-weight: 500;
+  border-left: 6rpx solid #FDD430;
+  margin-bottom: 20rpx;
+}
+
+.memo image {
+  width: 100%;
+  height: 310rpx;
+  border-radius: 8rpx;
+}
+
+.memo-body {
+  font-size: 26rpx;
+  color: #666;
+  margin: 20rpx 0;
+}
+
+.buy{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  width: 100%;
+  background: #FAD55B;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.buy-1{
+  height: 122rpx;
+  padding-bottom: 34rpx;
+}
+
+.buy-j{
+  height: 88rpx;
+  width: 100%;
+}
+
+.buy-j-1{
+  height: 122rpx;
+}

@@ -1,0 +1,16 @@
+<view class="nv">
+  <view class="navbar {{opacity == 'true' ? 'opacity' : ''}}"
+    style="height:{{navHeight}}px; padding-top:{{navTop}}px; background:{{bg}}">
+    <view class="icon">
+      <text wx:if="{{back != 'hidden'}}" class="cuIcon-back {{iconColor == 'black' ? 'text-black' : 'text-gray'}}"
+        bindtap="back"></text>
+    </view>
+    <view class="title {{color == 'white'? 'white' : '' }}">
+      <view>{{title}}</view>
+    </view>
+    <view class="icon"></view>
+  </view>
+</view>
+
+<!-- 顶部导航栏fixed后底部撑开盒子 -->
+<view wx:if="{{open != 'false'}}" class="nvj" style="height:{{navHeight}}px;"></view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/card/card",
+    "pages/my/my",
+    "pages/teamList/teamList",
+    "pages/teacherList/teacherList",
+    "pages/teamDetail/teamDetail",
+    "pages/cardDetail/cardDetail",
+    "pages/login/login",
+    "pages/authorize/authorize",
+    "pages/testData/testData",
+    "pages/leave/leave",
+    "pages/recess/recess",
+    "pages/studentList/studentList",
+    "pages/studentDetail/studentDetail",
+    "pages/companyDetail/companyDetail",
+    "pages/articleDetail/articleDetail",
+    "pages/articleList/articleList",
+    "pages/videoList/videoList",
+    "pages/bind/bind"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#979797",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/index.png",
+        "selectedIconPath": "/image/index_s.png"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "text": "课时卡",
+        "iconPath": "/image/card.png",
+        "selectedIconPath": "/image/card_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/image/my.png",
+        "selectedIconPath": "/image/my_s.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

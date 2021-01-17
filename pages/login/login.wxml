@@ -1,0 +1,14 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="登陆" opacity="true"></navbar>
+
+<view class="logo">
+  <view>
+    <image src="/image/logo.jpg"></image>
+  </view>
+  <view class="title">GCF</view>
+  <view class="title2">篮球俱乐部</view>
+</view>
+
+<view class="login">
+  <button class="sub" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登陆</button>
+</view>

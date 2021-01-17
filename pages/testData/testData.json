@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "footerTips": "/components/footerTips/footerTips",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

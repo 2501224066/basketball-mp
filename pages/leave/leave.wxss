@@ -1,0 +1,45 @@
+page {
+  background: #fff !important;
+}
+
+.box {
+  padding: 0 30rpx;
+}
+
+.title {
+  padding: 20rpx 0;
+  font-size: 40rpx;
+  color: #333;
+}
+
+.title>span {
+  color: #E02020;
+  margin-right: 10rpx;
+}
+
+textarea {
+  width: 100%;
+  height: 300rpx;
+  border: 1rpx solid #ebebeb;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+
+.sub {
+  margin-top: 8vh;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  background: #FAD55B;
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+
+.date{
+  width: 100%;
+  border: 1rpx solid #ebebeb;
+  border-radius: 8rpx;
+  padding: 25rpx;
+}

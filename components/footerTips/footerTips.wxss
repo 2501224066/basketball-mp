@@ -1,0 +1,6 @@
+.footer{
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+  padding: 30rpx 0;
+}

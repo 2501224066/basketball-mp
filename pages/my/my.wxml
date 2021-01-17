@@ -1,0 +1,87 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="我的" back="hidden" bg="#f3f3f3"></navbar>
+
+<view wx:if="{{loginStatus}}">
+  <!-- 个人信息 -->
+  <view class="user">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view>
+      <view class="title">{{userInfo.nickName}}</view>
+      <view class="memo">{{userInfo.phone}}</view>
+    </view>
+  </view>
+
+  <!-- 球队 -->
+  <view class="box">
+    <view class="team" wx:if="{{level != 0}}">
+      <view class="team-top" bindtap="toTeamDetail">
+        <image src="{{imgPre}}/{{studentInfo.tea_log}}"></image>
+        <view>{{studentInfo.team_name}}</view>
+        <view class="team-status" wx:if="{{studentInfo.team_status}}">成队</view>
+      </view>
+      <view class="team-body">
+        <view>
+          <view>{{studentInfo.period}}</view>
+          <view>剩余课时</view>
+        </view>
+        <span class="team-line"></span>
+        <view>
+          <view>{{studentInfo.end_sign}}</view>
+          <view>合同剩余天数</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作 -->
+  <view class="box">
+    <view class="op">
+      <!--
+      <view>
+        <view class="op-title">
+          <image src="/image/my-op-1.png"></image>我的订单
+        </view>
+        <text class="cuIcon-right text-gray"></text>
+      </view>
+      -->
+      <view bindtap="toLeave" wx:if="{{level == 1}}">
+        <view class="op-title">
+          <image src="/image/my-op-2.png"></image>个人请假
+        </view>
+        <view><text class="cuIcon-right text-gray"></text></view>
+      </view>
+      <view bindtap="toRecess" wx:if="{{level == 1}}">
+        <view class="op-title">
+          <image src="/image/my-op-3.png"></image>个人休课
+        </view>
+        <view><text class="cuIcon-right text-gray"></text></view>
+      </view>
+      <view bindtap="toBind" wx:if="{{level == 2}}">
+        <view class="op-title">绑定学员</view>
+        <view><text class="cuIcon-right text-gray"></text></view>
+      </view>
+      <view wx:if="{{level == 1}}">
+        <view class="op-title"><text class="cuIcon-selectionfill text-olive"></text>体测数据</view>
+        <switch class="orange" bindchange="test" checked wx:if="{{sportStatus}}"></switch>
+        <switch class="orange" bindchange="test" wx:else></switch>
+      </view>
+      <view bindtap="callPhone">
+        <view class="op-title"><text class="cuIcon-dianhua text-cyan"></text>客服电话</view>
+        <view class="text-gray">{{kefuPhone}}</view>
+      </view>
+      <view bindtap="copyWeixin">
+        <view class="op-title"><text class="cuIcon-weixin text-green"></text>咨询微信</view>
+        <view class="text-gray">{{kefuWeixin}}</view>
+      </view>
+      <view bindtap="copyEmail">
+        <view class="op-title"><text class="cuIcon-global text-brown"></text>联系邮箱</view>
+        <view class="text-gray">{{kefuEmail}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 退出登陆 -->
+  <view class="box" bindtap="unLogin">
+    <view class="unlogin">退出登陆</view>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+page {
+  background: #fff !important;
+}
+
+.team {
+  padding: 30rpx;
+}
+
+.team-box {
+  padding: 20rpx 0 10rpx 0;
+  border: 2rpx solid #FFDE5A;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+}
+
+.team-box image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 8rpx;
+  margin: 0 30rpx;
+}
+
+.team-body {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.team-body>view {
+  margin-bottom: 10rpx;
+}
+
+.team-body>view:nth-child(1) {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.xie {
+  font-style: oblique;
+}
+
+.xie text {
+  margin-right: 10rpx;
+}
+
+.label {
+  color: #232326;
+  font-size: 34rpx;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 50rpx 0 20rpx 0;
+}
+
+.label-line {
+  width: 100rpx;
+  height: 26rpx;
+  border-bottom: 1rpx solid #FFDE5A;
+  margin: 0 40rpx;
+}
+
+.memo {
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color: #232326;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+
+.people>view {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.people image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  border: 50rpx;
+}
+
+.swiper-label {
+  margin-bottom: -20rpx;
+}
+
+.course {
+  padding: 0 10%;
+  background: #FFDE5A;
+  font-weight: 500;
+}
+
+.course>view {
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-title {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.course-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.course-more {
+  flex: 1;
+  text-align: center;
+  background-image: linear-gradient(#FFDE5A, #fff);
+  padding: 20rpx;
+  font-style: oblique;
+  font-weight: 500;
+  color: hsl(48, 100%, 68%);
+  text-shadow: 1rpx 3rpx 3rpx #fff;
+}

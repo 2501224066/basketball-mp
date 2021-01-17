@@ -1,0 +1,27 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="机构介绍" bg="#EDEDED"></navbar>
+
+<map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" covers="{{covers}}"></map>
+<view class="where">
+  <view class="where-label">
+    <text class="cuIcon-location text-yellow"></text>
+    <view>机构地址</view>
+  </view>
+  <view class="where-address">湖北省 武汉市 洪山区野 芷湖西路16号GCF体育俱乐部</view>
+</view>
+
+<view class="label">
+  <view class="label-a"></view>
+  <view class="label-b"></view>
+  <span>机构介绍</span>
+</view>
+
+<view class="content">
+  <text>
+    　　GCF体育俱乐部是一家以幼儿体育教育应以促进幼儿身心和谐健康发展为宗旨，幼儿园教师为幼儿设计的体育活动应体现基础性、综合性、趣味性与科学性的特征，应能为幼儿提供锻炼多种运动技能与发展多方面身心素质的机会。
+
+    　　篮球运动作为一种全身运动，对幼儿各方面素质和能力的发展具有显著价值。教师可在简化篮球运动技术与理论的基础上，根据幼儿的年龄特征与发展需要，为幼儿设计适合其身体素质和身高比例的篮球运动环境及篮球比赛规则。在争取家长理解和支持的前提下，以丰富多彩的篮球游戏吸引幼儿对篮球运动的兴趣，并根据幼儿年龄特征合理制定科学适宜的篮球运动技能发展目标及实施手段，在促进幼儿身体素质发展的同时，培养幼儿团队合作、勇敢拼搏等优良心理品质。
+
+    　　俱乐部的培训部已经研制出了多种教程：幼儿篮球兴趣培训班、青少年篮球培训班、青少年篮球提升班、中招体育考试提升班、高招体育考试提升班、一对一私教班等。
+  </text>
+</view>

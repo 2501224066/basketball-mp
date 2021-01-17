@@ -1,0 +1,37 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="个人请假" bg="#EDEDED"></navbar>
+
+<view class="box">
+
+  <view class="title">
+    <span>*</span>开始日期
+  </view>
+
+  <view class="date">
+    <picker mode="date" value="{{date}}" start="2021-01-01" end="2030-01-01" bindchange="startDate">
+      <view class="picker">
+        {{startDate}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="title">
+    <span>*</span>结束日期
+  </view>
+
+  <view class="date">
+    <picker mode="date" value="{{date}}" start="2021-01-01" end="2030-01-01" bindchange="endDate">
+      <view class="picker">
+        {{endDate}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="title">
+    <span>*</span>请假理由
+  </view>
+
+  <textarea placeholder="请输入请假理由…" bindblur="text"></textarea>
+
+  <view class="sub" bindtap="submit" wx:if="{{text}}">提交</view>
+</view>

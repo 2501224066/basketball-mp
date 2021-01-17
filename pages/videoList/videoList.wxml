@@ -1,0 +1,9 @@
+<!-- 顶部导航 -->
+<navbar it="2" title="精彩视频" bg="#EDEDED"></navbar>
+
+<view class="box">
+  <view class="box-item" wx:for="{{list}}" wx:key="index">
+    <video src="{{imgPre}}/{{item.video_url}}" object-fit="fill"></video>
+    <view class="title">{{item.video_name}}</view>
+  </view>
+</view>
