@@ -22,7 +22,7 @@ Page({
         title: '授权成功',
         success() {
           wx.switchTab({
-            url: '/pages/my/my'
+            url: '/pages/index/index'
           })
         }
       })

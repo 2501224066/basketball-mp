@@ -14,7 +14,7 @@
   <!-- 球队 -->
   <view class="box">
     <view class="team" wx:if="{{level != 0}}">
-      <view class="team-top" bindtap="toTeamDetail">
+      <view class="team-top" bindtap="toTeamDetail" wx:if="{{studentInfo.team_nam}}">
         <image src="{{imgPre}}/{{studentInfo.tea_log}}"></image>
         <view>{{studentInfo.team_name}}</view>
         <view class="team-status" wx:if="{{studentInfo.team_status}}">成队</view>

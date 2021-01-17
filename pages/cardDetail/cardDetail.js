@@ -7,6 +7,7 @@ const App = getApp();
 
 Page({
   data: {
+    id: null,
     detail: {},
     imgPre: wx.getStorageSync('setting').img_pre,
     iphoneFooter: App.globalData.iphoneFooter,
@@ -15,6 +16,9 @@ Page({
   },
 
   onLoad(option) {
+    this.setData({
+      id: option.id
+    })
     this.getData(option.id)
   },
 
@@ -33,14 +37,16 @@ Page({
   // 报名
   buy() {
     if (wx.getStorageSync('loginStatus')) {
-      apply().then(res => {
+      let obj = {
+        card_id: this.data.id
+      }
+      apply(obj).then(res => {
         wx.showToast({
           icon: "success",
           title: '报名成功,等待客服与您联系',
         })
-        wx.navigateTo({
-          url: '/pages/card/card',
-        })
+        // 刷新购买状态
+        this.getData(this.data.id)
       })
     } else {
       wx.navigateTo({

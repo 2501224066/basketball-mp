@@ -9,7 +9,7 @@ Page({
     list: []
   },
 
-  onLoad() {
+  onShow() {
     this.getData()
   },
 
@@ -31,7 +31,6 @@ Page({
 
   // 报名
   buy(e) {
-    console.log(e)
     if (wx.getStorageSync('loginStatus')) {
       let obj = {
         card_id: e.currentTarget.dataset.id
@@ -41,9 +40,8 @@ Page({
           icon: "success",
           title: '报名成功,等待客服与您联系',
         })
-        wx.switchTab({
-          url: '/pages/card/card',
-        })
+        // 刷新购买状态
+        this.getData()
       })
     } else {
       wx.navigateTo({

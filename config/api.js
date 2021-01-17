@@ -215,3 +215,12 @@ export function userSport(data, repair = '') {
     data: data
   })
 }
+
+// 用户身份
+export function getLevel(data, repair = '') {
+return common.go({
+  method: 'get',
+  url: '/user/getLevel',
+  data: data
+})
+}

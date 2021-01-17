@@ -47,7 +47,6 @@ Page({
           })
           wx.setStorageSync('sportStatus', res.data.sport_atatus)
           wx.setStorageSync('loginStatus', true)
-          wx.setStorageSync('level', res.data.level)
           wx.showToast({
             icon: "success",
             title: '登陆成功',

@@ -1,6 +1,7 @@
 import {
   switchSport,
-  studentInfo
+  studentInfo,
+  getLevel
 } from '../../config/api'
 
 Page({
@@ -19,7 +20,7 @@ Page({
   onShow() {
     this.checkLogin()
   },
-
+  
   // 检查登陆
   checkLogin() {
     if (!wx.getStorageSync('loginStatus')) {
@@ -27,6 +28,7 @@ Page({
         url: '/pages/login/login',
       })
     } else {
+      this.getLevel()
       this.setData({
         loginStatus: wx.getStorageSync('loginStatus'),
         userInfo: wx.getStorageSync('userInfo'),
@@ -34,10 +36,17 @@ Page({
         level: wx.getStorageSync('level'),
         imgPre: wx.getStorageSync('setting').img_pre
       })
-      if (wx.getStorageSync('level') == 1) {
+    }
+  },
+
+  // 用户身份
+  getLevel(){
+    getLevel().then(res=>{
+      wx.setStorageSync('level', res.data.level)
+      if (res.data.level == 1) {
         this.studentInfo()
       }
-    }
+    })
   },
 
   // 学员信息
