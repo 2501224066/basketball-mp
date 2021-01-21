@@ -3,7 +3,7 @@
 
 <view class="box">
   <view class="box-item" wx:for="{{list}}" wx:key="index">
-    <video src="{{imgPre}}/{{item.video_url}}" object-fit="fill"></video>
+    <video src="{{imgPre}}/{{item.video_url}}" object-fit="contain"></video>
     <view class="title">{{item.video_name}}</view>
   </view>
 </view>

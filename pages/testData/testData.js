@@ -1,7 +1,8 @@
 import * as echarts from '../../ec-canvas/echarts';
 
 import {
-  userSport
+  userSport,
+  switchSport
 } from '../../config/api'
 
 // 雷达数据
@@ -13,6 +14,7 @@ let ZHEXIAN_DATA = {}
 
 Page({
   data: {
+    sportStatus: null,
     LEIDA_DATA: null,
     BIN_DATA: null,
     ZHEXIAN_DATA: null,
@@ -105,7 +107,7 @@ Page({
 
   getData(id) {
     let obj = {
-      id: 5
+      id: id
     }
     userSport(obj).then(res => {
       console.log(res)
@@ -115,9 +117,24 @@ Page({
       this.setData({
         LEIDA_DATA: res.data.leida,
         BIN_DATA: res.data.bin,
-        ZHEXIAN_DATA: res.data.zhexian
+        ZHEXIAN_DATA: res.data.zhexian,
+        sportStatus: wx.getStorageSync('sportStatus')
       })
       this.open()
+    })
+  },
+
+  // 体测开关
+  test(e) {
+    let obj = {
+      status: e.detail.value ? 1 : 0
+    }
+    wx.setStorageSync('sportStatus', e.detail.value)
+    switchSport(obj).then(res => {
+      wx.showToast({
+        icon: 'none',
+        title: '切换成功',
+      })
     })
   },
 

@@ -4,13 +4,19 @@ import {
 
 Page({
   data: {
-    imgPre: wx.getStorageSync('setting').img_pre,
+    imgPre: null,
     detail: {},
     content: ''
   },
 
   onLoad(option) {
     this.getData(option.id)
+  },
+
+  onShow() {
+    this.setData({
+      imgPre: wx.getStorageSync('setting').img_pre
+    })
   },
 
   getData(id) {

@@ -1,6 +1,14 @@
 <!-- 顶部导航 -->
 <navbar it="2" title="体测数据"></navbar>
 
+
+<view class="label">
+  <view class="label-line"></view>
+  <view class="label-title">公开展示</view>
+  <switch class="orange" bindchange="test" checked wx:if="{{sportStatus}}"></switch>
+  <switch class="orange" bindchange="test" wx:else></switch>
+</view>
+
 <view class="label">
   <view class="label-line"></view>
   <view>维度数据</view>

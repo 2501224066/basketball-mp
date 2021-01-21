@@ -14,10 +14,10 @@
         <view>毕业院校:</view>
         <view class="list-label">{{item.school}}</view>
       </view>
-      <view class="list-detail-1" wx:if="{{item.honnor}}">
+      <view class="list-detail-1" wx:if="{{item.honor}}">
         <view>获得荣誉:</view>
         <view class="list-label">
-          {{item.honnor}}
+          {{item.honor}}
         </view>
       </view>
     </view>

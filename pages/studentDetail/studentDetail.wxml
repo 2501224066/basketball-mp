@@ -22,8 +22,8 @@
           <view>摸高:{{detail.sargent_jump ? detail.sargent_jump : ' - '}}m</view>
         </view>
         <view class="man-2">
-          <view>臂展:{{detail.arm_spread ? detail.arm_spread : ' - '}}m</view>
-          <view>手指跨度:{{detail.finger_span ? detail.finger_span : ' - '}}m</view>
+          <view>臂展:{{detail.arm_spread ? detail.arm_spread : ' - '}}cm</view>
+          <view>手指跨度:{{detail.finger_span ? detail.finger_span : ' - '}}cm</view>
         </view>
       </view>
     </view>
@@ -36,16 +36,16 @@
   <text class="cuIcon-right text-yellow"></text>
 </view>
 
-<view class="label"  wx:if="{{video.length}}">
+<view class="label"  wx:if="{{video.length}}" wx:if="{{videoShow != 0}}">
   <view class="label-line"></view>
   <view>训练视频</view>
 </view>
 
 <!-- 视频 -->
-<view class="box">
+<view class="box" wx:if="{{videoShow != 0}}">
   <view class="box-content" wx:for="{{video}}" wx:key="index">
     <view class="vi">
-      <video src="{{imgPre}}/{{item}}" object-fit="fill"></video>
+      <video src="{{imgPre}}/{{item}}" object-fit="contain"></video>
     </view>
   </view>
 </view>

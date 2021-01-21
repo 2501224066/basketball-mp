@@ -25,6 +25,10 @@ page {
   background: #FDD430;
 }
 
+.label-title{
+  flex: 1;
+}
+
 .box {
   padding: 10rpx 0;
   width: 100%;

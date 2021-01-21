@@ -5,17 +5,20 @@ import {
 Page({
   data: {
     userId: null,
-    sportStatus: wx.getStorageSync('sportStatus'),
-    imgPre: wx.getStorageSync('setting').img_pre,
+    sportStatus: false,
+    imgPre: null,
     detail: {},
     cardCur: 0,
     swiperList: [],
-    video: []
+    video: [],
+    videoShow: wx.getStorageSync('setting').video_switch,
   },
 
   onLoad(options) {
     this.setData({
-      userId: options.id
+      userId: options.id,
+      sportStatus: wx.getStorageSync('sportStatus'),
+      imgPre: wx.getStorageSync('setting').img_pre,
     })
     this.getData(options.id)
   },
@@ -49,8 +52,15 @@ Page({
 
   // 去体测报告
   toTestData() {
+    if (this.data.detail.sport_num <= 0) {
+      wx.showToast({
+        title: '暂无体测数据',
+        icon: 'none'
+      })
+      return false
+    }
     wx.navigateTo({
-      url: '/pages/testData/testData?id=' + this.userId,
+      url: '/pages/testData/testData?id=' + this.data.userId,
     })
   },
 

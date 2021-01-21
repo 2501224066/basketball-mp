@@ -17,8 +17,8 @@
         <view>摸高:{{item.sargent_jump ? item.sargent_jump : ' - '}}m</view>
       </view>
       <view class="man-2">
-        <view>臂展:{{item.arm_spread ? item.arm_spread : ' - '}}m</view>
-          <view>手指跨度:{{item.finger_span ? item.finger_span : ' - '}}m</view>
+        <view>臂展:{{item.arm_spread ? item.arm_spread : ' - '}}cm</view>
+          <view>手指跨度:{{item.finger_span ? item.finger_span : ' - '}}cm</view>
       </view>
       <view class="man-3">综合评分:<span>{{item.point ? item.point : ' - '}}分</span></view>
     </view>

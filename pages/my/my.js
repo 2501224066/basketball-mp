@@ -6,21 +6,20 @@ import {
 
 Page({
   data: {
-    loginStatus: wx.getStorageSync('loginStatus'),
-    userInfo: wx.getStorageSync('userInfo'),
-    sportStatus: wx.getStorageSync('sportStatus'),
-    level: wx.getStorageSync('level'),
+    loginStatus: null,
+    userInfo: null,
+    level: null,
     studentInfo: {},
     imgPre: null,
-    kefuPhone: wx.getStorageSync('setting').kefu_phone,
-    kefuWeixin: wx.getStorageSync('setting').kefu_weixin,
-    kefuEmail: wx.getStorageSync('setting').kefu_email
+    kefuPhone: null,
+    kefuWeixin: null,
+    kefuEmail: null
   },
 
   onShow() {
     this.checkLogin()
   },
-  
+
   // 检查登陆
   checkLogin() {
     if (!wx.getStorageSync('loginStatus')) {
@@ -32,17 +31,20 @@ Page({
       this.setData({
         loginStatus: wx.getStorageSync('loginStatus'),
         userInfo: wx.getStorageSync('userInfo'),
-        sportStatus: wx.getStorageSync('sportStatus'),
-        level: wx.getStorageSync('level'),
-        imgPre: wx.getStorageSync('setting').img_pre
+        imgPre: wx.getStorageSync('setting').img_pre,
+        kefuPhone: wx.getStorageSync('setting').kefu_phone,
+        kefuWeixin: wx.getStorageSync('setting').kefu_weixin,
+        kefuEmail: wx.getStorageSync('setting').kefu_email
       })
     }
   },
 
   // 用户身份
-  getLevel(){
-    getLevel().then(res=>{
-      wx.setStorageSync('level', res.data.level)
+  getLevel() {
+    getLevel().then(res => {
+      this.setData({
+        level: res.data.level
+      })
       if (res.data.level == 1) {
         this.studentInfo()
       }
@@ -83,23 +85,23 @@ Page({
   unLogin() {
     wx.removeStorageSync('loginStatus')
     wx.removeStorageSync('sportStatus')
-    wx.removeStorageSync('level')
+    wx.removeStorageSync('userInfo')
     wx.switchTab({
       url: '/pages/index/index',
     })
   },
 
-  // 体测
-  test(e) {
-    let obj = {
-      status: e.detail.value ? 1 : 0
-    }
-    wx.setStorageSync('sportStatus', e.detail.value)
-    switchSport(obj).then(res => {
+  // 去体测
+  toTestData() {
+    if(this.data.studentInfo.sport_num <= 0){
       wx.showToast({
-        icon: 'none',
-        title: '切换成功',
+        title: '暂无体测数据',
+        icon: 'none'
       })
+      return false
+    }
+    wx.navigateTo({
+      url: '/pages/testData/testData?id=' + this.data.studentInfo.user_id,
     })
   },
 

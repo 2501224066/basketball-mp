@@ -30,6 +30,11 @@ Page({
 
   // 获取手机号
   getPhoneNumber(e) {
+    // 拒绝授权
+    if (e.detail.errMsg != 'getPhoneNumber:ok') {
+      return false
+    }
+
     var that = this
     wx.checkSession({
       success() {
@@ -55,7 +60,7 @@ Page({
                 wx.navigateTo({
                   url: '/pages/authorize/authorize',
                 })
-              }else{
+              } else {
                 wx.switchTab({
                   url: '/pages/index/index',
                 })
@@ -67,6 +72,13 @@ Page({
       fail() {
         that.login()
       }
+    })
+  },
+
+  // 去首页
+  toIndex() {
+    wx.switchTab({
+      url: '/pages/index/index',
     })
   },
 

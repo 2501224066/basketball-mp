@@ -8,7 +8,7 @@ Page({
   data: {
     id: null,
     detail: {},
-    imgPre: wx.getStorageSync('setting').img_pre,
+    imgPre: null,
     cardCur: 0,
     swiperList: [],
     courseList: [],
@@ -18,7 +18,8 @@ Page({
 
   onLoad(option) {
     this.setData({
-      id: option.id
+      id: option.id,
+      imgPre: wx.getStorageSync('setting').img_pre,
     })
     this.getData()
   },

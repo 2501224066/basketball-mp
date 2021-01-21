@@ -29,6 +29,14 @@ Page({
     })
   },
 
+  // 去首页
+  toIndex() {
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+  },
+
+
   // 分享
   onShareAppMessage: function () {}
 })

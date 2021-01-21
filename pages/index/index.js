@@ -9,7 +9,8 @@ Page({
     swiperList: [],
     imgPre: '',
     home: null,
-    imgPre: wx.getStorageSync('setting').img_pre
+    imgPre: null,
+    videoShow: 0,
   },
 
   onShow() {
@@ -45,7 +46,8 @@ Page({
       wx.setStorageSync('setting', res.data)
       this.setData({
         swiperList: JSON.parse(res.data.carousel_map),
-        imgPre: res.data.img_pre
+        imgPre: res.data.img_pre,
+        videoShow: res.data.video_switch
       })
     })
   },

@@ -4,14 +4,18 @@ import {
 
 Page({
   data: {
-    imgPre: wx.getStorageSync('setting').img_pre,
+    imgPre: null,
     list: [],
     page: 1,
     pageSize: 15
   },
 
-  onLoad() {
+  onShow() {
     this.getData()
+    this.setData({
+      page: 1,
+      imgPre: wx.getStorageSync('setting').img_pre,
+    })
   },
 
   getData(addStatus = false) {
@@ -34,8 +38,8 @@ Page({
     })
   },
 
-   // 加载更多
-   onReachBottom() {
+  // 加载更多
+  onReachBottom() {
     this.getData(true)
   },
 

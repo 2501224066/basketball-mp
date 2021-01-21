@@ -11,4 +11,5 @@
 
 <view class="login">
   <button class="sub" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权信息</button>
+  <button class="sub2" bindtap="toIndex">返回</button>
 </view>

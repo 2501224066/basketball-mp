@@ -4,13 +4,17 @@ import {
 
 Page({
   data: {
-    imgPre: wx.getStorageSync('setting').img_pre,
+    imgPre: null,
     list: [],
     page: 1,
     pageSize: 15
   },
 
-  onLoad() {
+  onShow() {
+    this.setData({
+      page: 1,
+      imgPre: wx.getStorageSync('setting').img_pre,
+    })
     this.getData()
   },
 

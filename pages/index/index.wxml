@@ -40,7 +40,7 @@
 </view>
 
 <!-- 精彩视频 -->
-<view class="box">
+<view class="box" wx:if="{{videoShow != 0}}">
   <view class="box-top">
     <view class="label">精彩视频<image src="/image/i-1.png"></image>
     </view>
@@ -48,7 +48,7 @@
   </view>
   <view class="box-content">
     <view class="vi">
-      <video src="{{imgPre}}/{{home.video.video_url}}" object-fit="fill"></video>
+      <video src="{{imgPre}}/{{home.video.video_url}}" object-fit="contain"></video>
     </view>
     <view class="box-title">{{util.strHid(home.video.video_name, 20)}}</view>
   </view>
@@ -91,8 +91,8 @@
         <view>摸高:{{item.sargent_jump ? item.sargent_jump : ' - '}}m</view>
       </view>
       <view class="man-2">
-        <view>臂展:{{item.arm_spread ? item.arm_spread : ' - '}}m</view>
-          <view>手指跨度:{{item.finger_span ? item.finger_span : ' - '}}m</view>
+        <view>臂展:{{item.arm_spread ? item.arm_spread : ' - '}}cm</view>
+          <view>手指跨度:{{item.finger_span ? item.finger_span : ' - '}}cm</view>
       </view>
       <view class="man-3">综合评分:<span>{{item.point ? item.point : ' - '}}分</span></view>
     </view>

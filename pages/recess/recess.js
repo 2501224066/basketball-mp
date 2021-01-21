@@ -9,8 +9,14 @@ import {
 Page({
   data: {
     text: null,
-    imgPre: wx.getStorageSync('setting').img_pre,
+    imgPre: null,
     imgList: []
+  },
+
+  onShow(){
+    this.setData({
+      imgPre: wx.getStorageSync('setting').img_pre,
+    })
   },
 
   // 输入文本
