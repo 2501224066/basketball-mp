@@ -134,7 +134,7 @@ page {
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 8rpx;
-  background: #FDD430;
+  background: #FAD55B;
   color: #333;
   font-weight: 500;
 }

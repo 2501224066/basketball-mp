@@ -36,17 +36,24 @@ Page({
     })
 
     // 课时
-    getCause(obj).then(res=>{
+    getCause(obj).then(res => {
       this.setData({
         courseList: res.data.list
       })
     })
 
     // 成员
-    getPlayers(obj).then(res=>{
+    getPlayers(obj).then(res => {
       this.setData({
         manList: res.data.list
       })
+    })
+  },
+
+  // 去球员详情
+  toStudentDetail(e) {
+    wx.navigateTo({
+      url: '/pages/studentDetail/studentDetail?id=' + e.currentTarget.dataset.id,
     })
   },
 

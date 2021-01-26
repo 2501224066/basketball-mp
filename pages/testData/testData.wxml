@@ -30,12 +30,6 @@
 <view class="label-content">反映了孩子参与体质测试项目评级（优秀、良好、合格与需努力）的比例，并从最近两次体测对比中可以观察到测试评级比例的变化情况。</view>
 <!-- 饼图 -->
 <view class="box">
-  <view class="box-item">
-    <ec-canvas id="mychart-dom-pie0" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
-  </view>
-  <view class="box-item">
-    <ec-canvas id="mychart-dom-pie1" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
-  </view>
   <view class="box-content">
     <view>
       <view class="dian" style="background:#5AD7A6"></view>
@@ -54,6 +48,10 @@
       <view>需努力</view>
     </view>
   </view>
+  <ec-canvas id="mychart-dom-pie1" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
+</view>
+<view class="box">
+  <ec-canvas id="mychart-dom-pie0" canvas-id="mychart-pie" ec="{{ bin }}"></ec-canvas>
 </view>
 
 
@@ -73,10 +71,14 @@
     <view>{{item.title}}</view>
     <view>{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1]}}{{item.specs}}</view>
     <view>
-      <text wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}" class="cuIcon-top text-green"></text>
+      <text wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}"
+        class="cuIcon-top text-green"></text>
       <text wx:else class="cuIcon-down text-red"></text>
-      <view wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}" class="text-green">{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] - ZHEXIAN_DATA.data[index][0]}}{{item.specs}}</view>
-      <view wx:else class="text-red">{{ZHEXIAN_DATA.data[index][0] - ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1]}}{{item.specs}}</view>
+      <view wx:if="{{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] > ZHEXIAN_DATA.data[index][0]}}"
+        class="text-green">
+        {{ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1] - ZHEXIAN_DATA.data[index][0]}}{{item.specs}}</view>
+      <view wx:else class="text-red">
+        {{ZHEXIAN_DATA.data[index][0] - ZHEXIAN_DATA.data[index][ZHEXIAN_DATA.time.length-1]}}{{item.specs}}</view>
     </view>
   </view>
   <!-- 折线图 -->

@@ -4,7 +4,8 @@
 <view class="box">
   <view class="box-man">
     <view class="header">
-      <image src="{{imgPre}}/{{detail.play_img}}" mode="aspectFill"></image>
+      <image src="{{detail.play_img ? imgPre : ''}}/{{detail.play_img ? detail.play_img : 'image/wstc.jpg'}}"
+        mode="aspectFill"></image>
     </view>
     <view class="man">
       <view>
@@ -36,7 +37,7 @@
   <text class="cuIcon-right text-yellow"></text>
 </view>
 
-<view class="label"  wx:if="{{video.length}}" wx:if="{{videoShow != 0}}">
+<view class="label" wx:if="{{video.length}}" wx:if="{{videoShow != 0}}">
   <view class="label-line"></view>
   <view>训练视频</view>
 </view>
@@ -64,3 +65,10 @@
     </view>
   </swiper-item>
 </swiper>
+
+
+<view class="label" wx:if="{{video.length}}" wx:if="{{detail.evaluate != ''}}">
+  <view class="label-line"></view>
+  <view>教练评价</view>
+</view>
+<view class="content">{{detail.evaluate}}</view>

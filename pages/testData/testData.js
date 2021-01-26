@@ -242,10 +242,15 @@ function bin(chart, dataIndex) {
     color: ["#5AD7A6", "#5A8EF9", "#F6BD16", "#FF5783"],
     series: [{
       type: 'pie',
-      center: ['50%', '50%'],
-      radius: ['50%', '80%'],
+      center: ['50%', '60%'],
+      radius: ['40%', '70%'],
       labelLine: {
-        show: false
+        show:true,
+        position:'inner',
+        textStyle : {
+            fontWeight : 100 ,
+            fontSize : 3
+        },
       },
       data: BIN_DATA[dataIndex]
     }]

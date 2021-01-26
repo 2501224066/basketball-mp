@@ -36,11 +36,7 @@ page {
   position: relative;
   display: flex;
   background: #fff;
-}
-
-.box-item{
-  width: 50%;
-  height: 100%;
+  flex-wrap: wrap;
 }
 
 ec-canvas {
@@ -126,7 +122,7 @@ ec-canvas {
 .box-content {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 2vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -144,8 +140,4 @@ ec-canvas {
   height: 16rpx;
   border-radius: 8rpx;
   margin-right: 14rpx;
-}
-
-.box-item{
-  width: 50%;
 }

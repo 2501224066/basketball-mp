@@ -105,3 +105,11 @@ page {
   border-radius: 8rpx;
   margin-bottom: 20rpx;
 }
+
+.content {
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 30rpx;
+  font-weight: lighter;
+  background: #fff;
+}

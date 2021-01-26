@@ -61,7 +61,7 @@
   <view class="label-line"></view>
 </view>
 <view class="people">
-  <view wx:for="{{manList}}" wx:key="index">
+  <view wx:for="{{manList}}" wx:key="index" bindtap="toStudentDetail" data-id="{{item.id}}">
     <image src="{{item.user_headimgurl}}"></image>
   </view>
 </view>
