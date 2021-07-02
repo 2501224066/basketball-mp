@@ -41,8 +41,8 @@ page {
 
 .sub {
   font-weight: 500;
-  background: #FAD55B;
-  color: #333;
+  background: rgb(48,125,248);
+  color: #fff;
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;

@@ -39,7 +39,7 @@ page {
   font-size: 36rpx;
   color: #232326;
   font-weight: 500;
-  border-left: 6rpx solid #FDD430;
+  border-left: 6rpx solid #48b0ff;
   margin-bottom: 20rpx;
 }
 
@@ -63,8 +63,8 @@ page {
   line-height: 88rpx;
   text-align: center;
   width: 100%;
-  background: #FAD55B;
-  color: #000;
+  background: rgb(48,125,248);
+  color: #fff;
   font-size: 30rpx;
   font-weight: 500;
 }

@@ -3862,7 +3862,7 @@ scroll-view.cu-steps .cu-item {
 	color: var(--orange);
 }
 
-.text-yellow,
+.text-blue,
 .line-yellow,
 .lines-yellow {
 	color: var(--yellow);

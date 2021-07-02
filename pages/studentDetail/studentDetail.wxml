@@ -10,7 +10,7 @@
     <view class="man">
       <view>
         <view class="man-1">
-          <view class="text-yellow">{{detail.user_name}}</view>
+          <view class="text-blue">{{detail.user_name}}</view>
         </view>
         <view class="man-2">
           <view>{{detail.age ? detail.age : ' - '}}岁</view>
@@ -34,16 +34,16 @@
 <view class="label" bindtap="toTestData" wx:if="{{detail.sport_status}}">
   <view class="label-line"></view>
   <view>体测报告</view>
-  <text class="cuIcon-right text-yellow"></text>
+  <text class="cuIcon-right text-blue"></text>
 </view>
 
-<view class="label" wx:if="{{video.length}}" wx:if="{{videoShow != 0}}">
+<view class="label" wx:if="{{video.length && videoShow != 0}}">
   <view class="label-line"></view>
   <view>训练视频</view>
 </view>
 
 <!-- 视频 -->
-<view class="box" wx:if="{{videoShow != 0}}">
+<view class="box" wx:if="{{video.length && videoShow != 0}}">
   <view class="box-content" wx:for="{{video}}" wx:key="index">
     <view class="vi">
       <video src="{{imgPre}}/{{item}}" object-fit="contain"></video>
@@ -55,10 +55,9 @@
 <view class="label" wx:if="{{swiperList.length}}">
   <view class="label-line"></view>
   <view>练习瞬间</view>
-  <text class="cuIcon-right text-yellow"></text>
 </view>
-<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
-  duration="500" bindchange="cardSwiper" indicator-color="#fcf0d0" indicator-active-color="#eeb73f">
+<swiper  wx:if="{{swiperList.length}}"  class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000"
+  duration="500" bindchange="cardSwiper" indicator-color="#fcf0d0" indicator-active-color="#48b0ff">
   <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
     <view class="swiper-item">
       <image src="{{imgPre}}/{{item}}" mode="aspectFill"></image>

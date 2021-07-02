@@ -1,0 +1,7 @@
+page{
+  background: #fff !important;
+}
+
+.content{
+  padding: 2vh 30rpx 10vh 30rpx;
+}

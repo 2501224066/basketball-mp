@@ -5,8 +5,8 @@
 <view class="label">
   <view class="label-line"></view>
   <view class="label-title">公开展示</view>
-  <switch class="orange" bindchange="test" checked wx:if="{{sportStatus}}"></switch>
-  <switch class="orange" bindchange="test" wx:else></switch>
+  <switch class="blue" bindchange="test" checked wx:if="{{sportStatus}}"></switch>
+  <switch class="blue" bindchange="test" wx:else></switch>
 </view>
 
 <view class="label">
@@ -19,7 +19,7 @@
 </view>
 
 <view class="ma">
-  <text class="cuIcon-cardboardfill text-yellow"></text>
+  <text class="cuIcon-cardboardfill text-blue"></text>
 </view>
 
 <!-- 评级概括 -->
@@ -56,7 +56,7 @@
 
 
 <view class="ma">
-  <text class="cuIcon-cardboardfill text-yellow"></text>
+  <text class="cuIcon-cardboardfill text-blue"></text>
 </view>
 
 

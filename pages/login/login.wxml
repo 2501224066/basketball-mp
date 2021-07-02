@@ -10,6 +10,12 @@
 </view>
 
 <view class="login">
-  <button class="sub" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登陆</button>
+  <view class="xy" bindtap="agree">
+    <text wx:if="{{agree}}" class="cuIcon-roundcheckfill text-blue"></text>
+    <text wx:else class="cuIcon-round text-gray"></text>
+    <view>同意<span bindtap="toTreaty">《法律声明及隐私政策》</span></view>
+  </view>
+  <button wx:if="{{agree}}" class="sub" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登陆</button>
+  <button wx:else class="sub" bindtap="noAgree">微信一键登陆</button>
   <button class="sub2" bindtap="toIndex">返回</button>
 </view>

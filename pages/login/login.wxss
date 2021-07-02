@@ -14,8 +14,8 @@ page {
 .sub {
   width: 100% !important;
   font-weight: 500;
-  background: #FAD55B;
-  color: #333;
+  background: rgb(48,125,248);
+  color: #fff;
   text-align: center;
   height: 90rpx !important;
   line-height: 90rpx !important;
@@ -63,4 +63,24 @@ page {
 .title2 {
   font-size: 30rpx;
   color: #999;
+}
+
+.xy {
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.xy text {
+  margin-right: 10rpx;
+}
+
+.xy>view {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.xy span {
+  color: #2c8bf9;
 }

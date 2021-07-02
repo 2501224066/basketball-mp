@@ -79,7 +79,7 @@ page {
   height: 40rpx;
   margin-right: 20rpx;
   border-radius: 4rpx;
-  background: #FDD430;
+  background: #48b0ff;
 }
 
 .label text{
@@ -112,4 +112,5 @@ page {
   padding: 0 30rpx;
   font-weight: lighter;
   background: #fff;
+  margin-bottom: 10vh;
 }

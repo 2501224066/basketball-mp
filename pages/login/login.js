@@ -4,6 +4,7 @@ import {
 
 Page({
   data: {
+    agree: false,
     code: null
   },
 
@@ -13,6 +14,28 @@ Page({
     } else {
       this.login()
     }
+  },
+
+  // 去协议
+  toTreaty(){
+    wx.navigateTo({
+      url: '/pages/treaty/treaty',
+    })
+  },
+
+   // 同意协议
+   agree() {
+    this.setData({
+      agree: !this.data.agree
+    })
+  },
+
+  // 提示同意协议
+  noAgree() {
+    wx.showToast({
+      title: '请先同意协议',
+      icon: "none"
+    })
   },
 
   // 登陆

@@ -4,7 +4,7 @@
 <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" covers="{{covers}}"></map>
 <view class="where">
   <view class="where-label">
-    <text class="cuIcon-location text-yellow"></text>
+    <text class="cuIcon-location text-blue"></text>
     <view>机构地址</view>
   </view>
   <view class="where-address">湖北省 武汉市 洪山区野 芷湖西路16号GCF体育俱乐部</view>

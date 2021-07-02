@@ -18,7 +18,8 @@
     "pages/articleDetail/articleDetail",
     "pages/articleList/articleList",
     "pages/videoList/videoList",
-    "pages/bind/bind"
+    "pages/bind/bind",
+    "pages/treaty/treaty"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +29,7 @@
   },
   "tabBar": {
     "color": "#979797",
-    "selectedColor": "#000",
+    "selectedColor": "#48b0ff",
     "borderStyle": "black",
     "list": [{
         "pagePath": "pages/index/index",

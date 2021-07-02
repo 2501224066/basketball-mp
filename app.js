@@ -15,12 +15,12 @@ App({
   getPhoneModel() {
     wx.getSystemInfo({
       success: (res) => {
-        if (res.model === 'iPhone X' ||
-          res.model === 'iPhone XR' ||
-          res.model === 'iPhone XS Max' ||
-          res.model === 'iPhone 11' ||
-          res.model === 'iPhone 11 Pro' ||
-          res.model === 'iPhone 11 Pro Max') {
+        if (res.model.indexOf('iPhone X') != -1 ||
+          res.model.indexOf('iPhone XR') != -1 ||
+          res.model.indexOf('iPhone XS Max') != -1 ||
+          res.model.indexOf('iPhone 11') != -1 ||
+          res.model.indexOf('iPhone 11 Pro') != -1 ||
+          res.model.indexOf('iPhone 11 Pro Max') != -1) {
           this.globalData.iphoneFooter = true;
         } else {
           this.globalData.iphoneFooter = false;

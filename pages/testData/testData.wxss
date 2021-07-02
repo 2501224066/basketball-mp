@@ -22,7 +22,7 @@ page {
   height: 40rpx;
   margin-right: 20rpx;
   border-radius: 4rpx;
-  background: #FDD430;
+  background: #48b0ff;
 }
 
 .label-title{
@@ -64,21 +64,21 @@ ec-canvas {
 .tab-top>view:nth-child(1) {
   font-weight: 500;
   font-size: 40rpx;
-  color: #FDD430;
+  color: #48b0ff;
   margin-right: 10rpx;
 }
 
 .tab-top>view:nth-child(2) {
   padding: 0 30rpx;
-  background: #FDD430;
+  background: #48b0ff;
   font-weight: 500;
   color: #fff;
-  border-bottom: 1rpx solid #FDD430;
+  border-bottom: 1rpx solid #48b0ff;
 }
 
 .tab-top>view:nth-child(3) {
   padding: 0 30rpx;
-  border-bottom: 1rpx solid #FDD430;
+  border-bottom: 1rpx solid #48b0ff;
   font-size: 40rpx;
   font-weight: 500;
   font-style: oblique;

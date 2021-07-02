@@ -4,7 +4,7 @@
 <view class="box">
   <view class="box-man" wx:for="{{list}}" wx:key="index" bindtap="toDetail" data-id="{{item.user_id}}">
     <view class="header">
-      <image src="{{imgPre}}/{{item.play_img}}" mode="aspectFill"></image>
+      <image src="{{item.play_img ? imgPre : ''}}/{{item.play_img ? item.play_img : 'image/wstc.jpg'}}" mode="aspectFill"></image>
     </view>
     <view class="man">
       <view class="man-1">

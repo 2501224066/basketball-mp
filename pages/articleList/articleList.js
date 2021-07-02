@@ -11,6 +11,9 @@ Page({
   },
 
   onShow() {
+    this.setData({
+      page: 1
+    })
     this.getData()
     this.setData({
       page: 1,

@@ -61,7 +61,7 @@ page {
 }
 
 .team-status {
-  background: #FDD430;
+  background: #48b0ff;
   color: #fff;
   font-size: 22rpx;
   margin-left: 20rpx;
@@ -90,7 +90,7 @@ page {
 
 .team-body>view>view:nth-child(1) {
   font-size: 35rpx;
-  color: #FDD430;
+  color: #48b0ff;
 }
 
 .team-body>view>view:nth-child(2) {
@@ -134,7 +134,7 @@ page {
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 8rpx;
-  background: #FAD55B;
-  color: #333;
+  background: rgb(48,125,248);
+  color: #fff;
   font-weight: 500;
 }
